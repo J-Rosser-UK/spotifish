@@ -14,7 +14,7 @@ class Account(AbstractBaseUser, PermissionsMixin):
     profile_id = models.UUIDField(default=uuid.uuid4, unique=True)
     email = models.EmailField(_('email address'), unique=True)
     username = models.CharField(max_length=30, unique=True)
-    full_name = models.CharField(max_length=150)
+    fullname = models.CharField(max_length=150)
     date_joined = models.DateTimeField(default=timezone.now, blank=True, null=True)
 
     is_staff = models.BooleanField(default=False)                   # For admin site access.

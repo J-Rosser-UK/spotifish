@@ -8,13 +8,13 @@ class AccountAdminConfig(UserAdmin):
     """
 
     # Defining the fields that can be searched in the admin panel
-    search_fields = ('email', 'username', 'full_name', 'profile_id')
+    search_fields = ('email', 'username', 'fullname', 'profile_id')
 
     # Uncomment to enable sorting by start_date in a descending order
     ordering = ('-date_joined',)
 
     # Specifying the fields to be shown in the admin list view
-    list_display = ('email', 'username', 'full_name', 'profile_id','is_staff')
+    list_display = ('email', 'username', 'fullname', 'profile_id','is_staff')
 
 
 # Register the Account model with the custom admin configuration

@@ -151,6 +151,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sites.middleware.CurrentSiteMiddleware',
     'base.middleware.MeMiddleware',                                         # Custom middleware to replace "me" with user profile uuid
 ]
 

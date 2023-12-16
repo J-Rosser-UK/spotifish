@@ -1,10 +1,13 @@
-DELETE FROM profiles;
-DELETE FROM albums;
-DELETE FROM playlists;
-DELETE FROM tracks;
-DELETE FROM tracks_by_album;
-DELETE FROM tracks_by_playlist;
-DELETE FROM playlists_by_profile;
+-- DELETE FROM profiles;
+-- DELETE FROM albums;
+-- DELETE FROM playlists;
+-- DELETE FROM tracks;
+-- DELETE FROM tracks_by_album;
+-- DELETE FROM tracks_by_playlist;
+-- DELETE FROM playlists_by_profile;
+
+
+
 
 
 -- /* Profiles */
