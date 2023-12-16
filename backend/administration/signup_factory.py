@@ -37,16 +37,16 @@ class SignUpFactory:
 
         playlist = Playlists.objects.create(
             playlist_id = self.favourites_playlist_id,
-            playlist_privacy='private',
-            playlist_type='favourites',
-            playlist_name='Favourites',
-            profile_id=profile.profile_id
+            playlist_privacy = 'private',
+            playlist_type = 'favourites',
+            playlist_name = 'Favourites',
+            profile_id = profile.profile_id
         )
 
         playlist_by_profile = PlaylistsByProfile.objects.create(
-            profile_id=profile.profile_id,
+            profile_id = profile.profile_id,
             playlist_id = self.favourites_playlist_id,
-            playlist_position_string="aaa"
+            playlist_position_string = "aaa"
         )
 
         return playlist, playlist_by_profile

@@ -16,7 +16,7 @@ import jwt
 
 from base.models import Profiles
 from django.shortcuts import get_object_or_404
-from signup_factory import SignUpFactory
+from .signup_factory import SignUpFactory
 
 class SignUpView(APIView):
     """

@@ -1,6 +1,6 @@
 from django.db import models
 from cpkmodel import CPkModel
-from custom_fields import CustomJSONField
+from .custom_fields import CustomJSONField
 from django.contrib.postgres.fields import ArrayField
 from django.utils import timezone
 

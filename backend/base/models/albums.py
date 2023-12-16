@@ -1,5 +1,5 @@
 from django.db import models
-from custom_fields import CustomJSONField
+from .custom_fields import CustomJSONField
 from django.utils import timezone
 
 class Albums(models.Model):
