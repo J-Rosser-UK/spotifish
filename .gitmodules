@@ -1,0 +1,3 @@
+[submodule "spotifish-importer"]
+	path = spotifish-importer
+	url = https://github.com/J-Rosser-UK/spotifish-importer.git
