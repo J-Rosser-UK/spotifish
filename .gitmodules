@@ -1,3 +1,6 @@
 [submodule "spotifish-importer"]
 	path = spotifish-importer
 	url = https://github.com/J-Rosser-UK/spotifish-importer.git
+[submodule "backend/frontend"]
+	path = backend/frontend
+	url = https://github.com/J-Rosser-UK/spotifish-frontend.git

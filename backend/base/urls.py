@@ -6,6 +6,6 @@ urlpatterns = [
     # path('', include('base.views.followers')),
     path('', include('base.views.playlists')),
     path('', include('base.views.profiles')),
-    # path('', include('base.views.tracks')),
+    path('', include('base.views.tracks')),
 
 ]
