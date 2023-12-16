@@ -20,6 +20,7 @@ from rest_framework.schemas import get_schema_view
 
 urlpatterns = [
     path('', include('administration.urls')),
+    path('', include('base.urls')),
     
 
     # Docs page
@@ -32,7 +33,7 @@ urlpatterns = [
             authentication_classes=[],
             patterns=[
                 path('', include('administration.urls')),
-                # path('', include('base.urls')),
+                path('', include('base.urls')),
             ]
         )
     ),

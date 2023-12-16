@@ -24,6 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-3mf8di4886n%a6n25_i_(6s852y*s#-3*ozbf%h44jv1mqggum'
 
+PAGINATION_SIZE = 10
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -128,7 +130,7 @@ REST_AUTH = {
 
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes = 15),
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours = 8),
     'REFRESH_TOKEN_LIFETIME': timedelta(weeks = 2),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': False,
