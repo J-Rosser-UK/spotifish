@@ -74,6 +74,7 @@ class TracksByPlaylistSerializer(serializers.Serializer):
     playlist_id = serializers.UUIDField(source='playlist.playlist_id', read_only=True)
     playlist_name = serializers.CharField(source='playlist.playlist_name', read_only=True)
     playlist_privacy = serializers.CharField(source='playlist.playlist_privacy', read_only=True)
+    playlist_type = serializers.CharField(source='playlist.playlist_type', read_only=True)
     playlist_banner = serializers.CharField(source='playlist.playlist_banner', read_only=True)
     playlist_likes_counter = serializers.IntegerField(source='playlist.playlist_likes_counter', read_only=True)
     playlist_tracks_counter = serializers.IntegerField(source='playlist.playlist_tracks_counter', read_only=True)

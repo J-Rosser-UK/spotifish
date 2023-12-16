@@ -11,6 +11,7 @@ class Playlists(models.Model):
     playlist_genre = models.TextField(blank=True, null=True)
     playlist_subgenre = models.TextField(blank=True, null=True)
     playlist_privacy = models.TextField()
+    playlist_type = models.TextField()
     playlist_banner = models.TextField(blank=True, null=True)
     playlist_description = models.TextField(blank=True, null=True)
     playlist_links = CustomJSONField(blank=True, null=True)   
@@ -19,6 +20,7 @@ class Playlists(models.Model):
     playlist_likes_counter = models.IntegerField(default=0)
     playlist_tracks_counter = models.IntegerField(default=0)
     playlist_admin_list = ArrayField(models.UUIDField(blank=True), blank=True, default=list)
+    profile = models.ForeignKey('Profiles', on_delete=models.CASCADE, blank=True, null=True)
 
     class Meta:
         managed = False

@@ -6,6 +6,19 @@
 -- DELETE FROM tracks_by_playlist;
 -- DELETE FROM playlists_by_profile;
 
+-- ALTER TABLE playlists
+-- ADD COLUMN profile_id uuid REFERENCES profiles (profile_id) ON DELETE CASCADE;
+
+-- ALTER TABLE administration_account
+-- ADD COLUMN first_name TEXT;
+
+
+-- ALTER TABLE administration_account
+-- ADD COLUMN last_name TEXT;
+
+-- SELECT * FROM profiles WHERE profile_type='user';
+
+SELECT * FROM playlists WHERE playlist_id='0cccb6d2-411b-4372-b10d-83343a4c9ca9';
 
 
 
@@ -50,6 +63,7 @@
 --     playlist_likes_counter INT NOT NULL DEFAULT 0,
 --     playlist_tracks_counter INT NOT NULL DEFAULT 0,
 --     playlist_admin_list UUID[],
+--     playlist_type TEXT,
 -- ); 
 -- CREATE INDEX ON playlists (playlist_privacy);
 -- CREATE INDEX ON playlists (playlist_name);

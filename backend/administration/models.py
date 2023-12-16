@@ -21,6 +21,9 @@ class Account(AbstractBaseUser, PermissionsMixin):
     is_superuser = models.BooleanField(default=False)               # For all-encompassing permissions.
     is_active = models.BooleanField(default=True)                   # For account activation status.
 
+    first_name = models.CharField(max_length=30, null=True, blank=True)
+    last_name = models.CharField(max_length=30, null=True, blank=True)
+
     objects = AccountManager()
 
     USERNAME_FIELD = 'username'

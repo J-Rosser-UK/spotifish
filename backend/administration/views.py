@@ -43,6 +43,9 @@ class SignUpView(APIView):
         except ValidationError as e:
             validation_errors_list = [error for sublist in e.args[0] for error in sublist]
             return Response({'error': validation_errors_list}, status=status.HTTP_400_BAD_REQUEST)
+        
+        
+        
 
         # Validate fields
         user_serializer = AccountSerializer(data=request.data)
@@ -55,19 +58,18 @@ class SignUpView(APIView):
                 return Response({'error': str(e)}, status=status.HTTP_409_CONFLICT)
 
             if user:
-                data = request.data.copy()
-                data['profile_id'] = uuid.uuid4()
-
-                signup_factory = SignUpFactory(request, data)
+                
+                request.data["profile_id"] = user.profile_id
+                signup_factory = SignUpFactory(request)
 
                 profile = signup_factory.create()
     
-                return Response(data, status=status.HTTP_201_CREATED)
+                return Response(request.data, status=status.HTTP_201_CREATED)
 
         return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class LoginView(LoginView):
+class LogInView(LoginView):
     """
     Enhanced version of the default LoginView to include the user's profile_id in the response.
     """

@@ -38,6 +38,7 @@ CREATE TABLE playlists(
     playlist_likes_counter INT NOT NULL DEFAULT 0,
     playlist_tracks_counter INT NOT NULL DEFAULT 0,
     playlist_admin_list UUID[],
+    playlist_type TEXT,
     profile_id uuid REFERENCES profiles (profile_id) ON DELETE CASCADE
 ); 
 CREATE INDEX ON playlists (playlist_privacy);
