@@ -16,9 +16,9 @@
 -- ALTER TABLE administration_account
 -- ADD COLUMN last_name TEXT;
 
--- SELECT * FROM profiles WHERE profile_type='user';
+SELECT * FROM profiles WHERE profile_type='user';
 
-SELECT * FROM playlists WHERE playlist_id='0cccb6d2-411b-4372-b10d-83343a4c9ca9';
+-- SELECT * FROM playlists WHERE playlist_id='0cccb6d2-411b-4372-b10d-83343a4c9ca9';
 
 
 
